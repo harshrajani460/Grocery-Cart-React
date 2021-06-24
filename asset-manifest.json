@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/Grocery-Cart-React/static/css/main.db22a819.chunk.css",
+    "main.js": "/Grocery-Cart-React/static/js/main.5a4ff621.chunk.js",
+    "main.js.map": "/Grocery-Cart-React/static/js/main.5a4ff621.chunk.js.map",
+    "runtime-main.js": "/Grocery-Cart-React/static/js/runtime-main.7dd823c0.js",
+    "runtime-main.js.map": "/Grocery-Cart-React/static/js/runtime-main.7dd823c0.js.map",
+    "static/js/2.988fc15b.chunk.js": "/Grocery-Cart-React/static/js/2.988fc15b.chunk.js",
+    "static/js/2.988fc15b.chunk.js.map": "/Grocery-Cart-React/static/js/2.988fc15b.chunk.js.map",
+    "index.html": "/Grocery-Cart-React/index.html",
+    "static/css/main.db22a819.chunk.css.map": "/Grocery-Cart-React/static/css/main.db22a819.chunk.css.map",
+    "static/js/2.988fc15b.chunk.js.LICENSE.txt": "/Grocery-Cart-React/static/js/2.988fc15b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7dd823c0.js",
+    "static/js/2.988fc15b.chunk.js",
+    "static/css/main.db22a819.chunk.css",
+    "static/js/main.5a4ff621.chunk.js"
+  ]
+}
