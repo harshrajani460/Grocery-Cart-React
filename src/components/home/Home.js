@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Form from "../form/Form.js";
 import List from "../list/List.js";
+import "./home.css";
 
 const Home = () => {
   const [groceryList, setGroceryList] = useState(getGroceryList());
