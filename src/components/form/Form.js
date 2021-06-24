@@ -6,6 +6,13 @@ const Form = ({ handleSubmit, handleEdit }) => {
   const [inEditMode, setInEditMode] = useState(false);
 
   useEffect(() => {
+    if (inEditMode) {
+      document.getElementById("inp-item").readOnly = true;
+    } else {
+      document.getElementById("inp-item").readOnly = false;
+    }
+  }, [inEditMode]);
+  useEffect(() => {
     let newName = name.trim();
     let newQuantity = Number(quantity);
     if (newName.length > 0 && newQuantity > 0) {
