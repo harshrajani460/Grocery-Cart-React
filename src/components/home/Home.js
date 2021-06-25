@@ -5,12 +5,11 @@ import "./home.css";
 
 const Home = () => {
   const [groceryList, setGroceryList] = useState(getGroceryList());
-  const [count, setCount] = useState(0);
   const [editItem, setEditItem] = useState({ name: "", qt: "" });
+
   useEffect(() => {
-    console.log("Use Effect");
     localStorage.setItem("groceryList", JSON.stringify(groceryList));
-  }, [count]);
+  }, [groceryList]);
 
   function getGroceryList() {
     let list = localStorage.getItem("groceryList");
@@ -28,19 +27,20 @@ const Home = () => {
       return true;
     });
     setGroceryList(newList);
-    setCount((prevCount) => prevCount + 1);
   }
+
   function editListItem(element) {
     let list = groceryList;
-    list = list.map((item) => {
+    let newList = list.map((item) => {
       if (item.name === element.name) {
         return { ...item, qt: element.qt };
       } else {
         return item;
       }
     });
-    setGroceryList(list);
+    setGroceryList(newList);
   }
+
   function isAlready(element) {
     let isInList = false;
     groceryList.forEach((item) => {
@@ -50,23 +50,25 @@ const Home = () => {
     });
     return isInList;
   }
+
   function increamentQuantity(element) {
     let list = groceryList;
-    console.log(element);
-    list = list.map((item) => {
+    let newList = list.map((item) => {
       if (item.name === element.name) {
         let newQt = element.qt + item.qt;
         return { ...item, qt: newQt };
       }
       return item;
     });
-    setGroceryList(list);
+    setGroceryList(newList);
   }
+
   function addListItem(element) {
-    let list = groceryList;
+    let list = [...groceryList];
     list.push(element);
     setGroceryList(list);
   }
+
   function handleSubmit(name, quantity, inEditMode) {
     const element = {
       name: name,
@@ -79,9 +81,8 @@ const Home = () => {
     } else {
       addListItem(element);
     }
-
-    setCount((prevCount) => prevCount + 1);
   }
+
   return (
     <>
       <div id="app">

@@ -24,7 +24,6 @@ const Form = ({ handleSubmit, handleEdit }) => {
 
   useEffect(() => {
     if (handleEdit.name !== "") {
-      console.log("welcome");
       setInEditMode(true);
       setName(handleEdit.name);
       setQuantity(handleEdit.qt);

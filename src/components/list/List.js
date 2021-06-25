@@ -8,7 +8,7 @@ const List = ({ groceryList, setEditItem, handleDelete }) => {
         <div className="add-container" id="list-item">
           {groceryList.map((item) => {
             return (
-              <div className="item">
+              <div className="item" key={item.name}>
                 <div className="item-text">
                   <div className="item-text-1">{item.name}</div>
                   <div className="item-text-2">x {item.qt}</div>
